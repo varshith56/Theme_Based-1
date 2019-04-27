@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+	<title>BloodBank</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Sanatorium a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+	<link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<script type="text/javascript" src = "js/bloodbank.js"></script>
+</head>
+
+<body>
+	<div class="modal video-modal fade" id="Loginmodal" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div id="small-dialog1" class="mfp-hide book-form">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h3>Sign In </h3>
+					<form action="#" method="post">
+						<input type="email" name="Email" class="email" placeholder="Email" required="" />
+						<input type="password" name="Password" class="password" placeholder="Password" required="" />
+						<!--<a href="#">Forgot Password?</a><br>-->
+						<div class="clearfix"></div>
+						<input type="submit" value="Sign In">
+					</form>
+					<div class="w3ls-or">
+						<p>Or</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal video-modal fade" id="signupmodal" tabindex="-1" role="dialog" aria-labelledby="myModal2">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div id="small-dialog2" class="mfp-hide book-form">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h3>Sign Up</h3>
+					<form action="#" method="post">
+						<input type="text" name="Name" placeholder="Your Name" required="" />
+						<input type="email" name="Email" class="email" placeholder="Email" required="" />
+						<input type="password" name="Password" id="password1" class="password" placeholder="Password" required="" />
+						<input type="password" name="Password" id="password2" class="password" placeholder="Confirm Password" required="" />
+						<input type="submit" value="Sign Up">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="banner jarallax">
+		<div class="navigation">
+			<div class="container">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header navbar-left">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					</div>
+						<div class="navbar-brand">
+							<a href="/"><i class="fas fa-tint"></i> DONATE BLOOD</a>
+						</div>
+					<div class="collapse navbar-collapse navbar-right navigation-right" id="bs-example-navbar-collapse-1">
+						<nav class="link-effect-3 w3ls-navma" id="link-effect-3">
+							<ul class="nav1 navbar-nav nav nav-wil">
+								<li class="nav-item">
+      							  <a class="nav-link" href="/knowMore">Know More</a>
+      							</li>
+								<li class="nav-item">
+      							  <a class="nav-link" href="/about">Team</a>
+      							</li>								
+      							<li class="nav-item">
+        							<a class="nav-link" href="#appointment"><i class="fas fa-user-plus"></i> Signup</a>
+      							</li>
+      							<li class="nav-item">
+        							<a class="nav-link" href="#appointment"><i class="fas fa-user"></i> Login</a>
+      							</li>
+							</ul>
+						</nav>
+					</div>
+				</nav>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="w3ls_banner_info" style="background-image:url("images/slide_5.jpg")">
+			<div class="container">
+				<div class="w3l-banner-grids">
+					<div class="slider">
+						<div class="callbacks_container">
+							<ul class="rslides" id="slider4">
+								<li>
+									<div class="w3ls-text">
+										<h3>Donate Bood</h3>
+										<h3>Give Blood Give Life</h3>
+										<h3>Anybody can give blood</h3>
+									</div>
+								</li>
+								<li>
+									<div class="w3ls-text">
+										<h3>The blood you donate gives someone another chance of life</h3>
+									</div>
+								</li>
+								<li>
+									<div class="w3ls-text">
+										<h3>Give the gift of life</h3>
+										<h3>Donate Blood</h3>																				
+									</div>
+								</li>
+								<li>
+									<div class="w3ls-text">
+										<h3>Come let's save lives</h3>
+										</div>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about" id="appointment">
+		<div class="container">
+			<div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>Sign up</h3>
+                    <form action="/" method ="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="First Name" name="fname" value="" pattern="[a-zA-Z]+" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Last Name" name="lname" value="" pattern="[a-zA-Z]+" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Contact Number" name="username" pattern="[0-9]{10}" required/>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Address" name="address" required></textarea>
+
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="password" placeholder="password" value="" />
+                        </div>
+                        <div class="form-group">
+                        <select name="bloodgroup" required aria-required="true">
+                        	<option value="">Blood Group</option>
+                   			<option value="A+">A+</option>
+  							<option value="B-">B-</option>
+  							<option value="B+">B+</option>
+  							<option value="O+">O+</option>
+  							<option value="O-">O-</option>
+  							<option value="A-">A-</option>
+  							<option value="AB+">AB+</option>
+  							<option value="AB-">AB-</option>
+						</select>
+						</div>
+
+
+
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Sign up" />
+                        </div>
+                      </form>
+                      
+                    
+                </div>
+                <div class="col-md-6 login-form-2" style="height: 501px;">
+                    <div class="login-logo">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    </div>
+                    <h3>Login</h3>
+                    <form action="/login" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Mobile Number" name="username" value="" pattern="[0-9]{10}"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Your Password *" name="password" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+		</div>
+	</section>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">sanatorium</h4>
+				</div>
+				<div class="modal-body agileits">
+					<div class="modal-img">
+						<img src="images/md.jpg" alt="image">
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer scelerisque orci consectetur sapien feugiat fermentum.
+						Phasellus convallis efficitur arcu, nec convallis odio egestas sit amet. Praesent erat sem, finibus vel ornare efficitur,
+						mattis sed risus. Duis ornare sodales dui finibus molestie.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: false,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!--banner Slider starts Here-->
+	<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+	<!-- //Default-JavaScript-File -->
+	<!-- gallery-pop-up -->
+	<script src="js/jquery.chocolat.js"></script>
+	<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen">
+	<!--light-box-files -->
+	<script type="text/javascript">
+		$(function () {
+			$('.agileinfo_portfolio_grid a').Chocolat();
+		});
+	</script>
+	<!-- //gallery-pop-up -->
+
+	<!-- FlexSlider -->
+	<script defer src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+		$(function () {});
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
+	<!-- FlexSlider -->
+	<!-- start-smoth-scrolling-nav -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 100,
+				easingType: 'linear'
+			};
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
+	<!-- //Slide-To-Top JavaScript -->
+	<!-- jarallax scrolling -->
+	<script src="js/jarallax.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<!-- //jarallax scrolling -->
+	<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+		});
+	</script>
+	<!-- //smooth scrolling -->
+	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+</body>
+
+</html>

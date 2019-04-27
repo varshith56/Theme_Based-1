@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>profile</title>
+    <style>
+      body{
+        height: 100%;
+      }
+  </style>
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-inverse">
+  <a class="navbar-brand" href="#">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+      </li>
+  </div>
+  <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+        <ul class="navbar-nav text-right">
+            <li class="nav-item active">
+                <a class="nav-link" href="#appointment" >Request</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/profile/<%=id._id%>/orders">Orders</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+
+
+        </ul>
+    </div>
+</nav>
+
+<div style="height:500px">
+  <img style = "width:100%;height: 500px" src="https://therosebeautyfiles.files.wordpress.com/2017/07/blood_646x300.jpg">
+</div>
+<section class="about" id="appointment" style="margin-top: 100px">
+    <div class="container">
+      <div class="container login-container">
+            <div class="row">
+                <div class="col-md-8 login-form-1">
+                    <h3>Request for BloodGroup required:</h3>
+                    <form action="profile/<%= id._id %>/display" method ="post">
+                      <div class="form-group">
+                            <input type="text" readonly class="form-control" placeholder="First Name" name="myid" value="<%=id._id%>" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="First Name" name="fname" value="<%=id.fname%>" pattern="[a-zA-Z]+" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Last Name" name="lname" value="<%=id.lname%>" pattern="[a-zA-Z]+" required/>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <input type="text" name="location" class="form-control" placeholder="location" value="<%=id.address%>" />
+                        </div>
+                        <div class="form-group">
+                        <select name="bloodgroup" required aria-required="true">
+                          <option value="" disabled selected hidden>Blood Group</option>
+                          <option value="A+">A+</option>
+                          <option value="B-">B-</option>
+                          <option value="B+">B+</option>
+                          <option value="O+">O+</option>
+                          <option value="O-">O-</option>
+                          <option value="A-">A-</option>
+                          <option value="AB+">AB+</option>
+                          <option value="AB-">AB-</option>
+                    </select>
+                </div>
+                    <div>
+                        <button type="submit">Request</button>
+                    </div>
+                      </form>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

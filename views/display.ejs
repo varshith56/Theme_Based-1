@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Display</title>
+    <style type="text/css">
+    .Table
+    {
+        display: table;
+        width:100%;
+    }
+    .Title
+    {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+    }
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+    }
+    .Row
+    {
+        display: table-row;
+    }
+    .Cell
+    {
+        display: table-cell;
+        border: solid;
+        border-width: thin;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+</style>
+    </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-inverse fixed-top" style="background-color:black;">
+  <a class="navbar-brand" href="#" style="color: white">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+      </li>
+  </div>
+  <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+        <ul class="navbar-nav text-right">
+            <li class="nav-item active">
+                <a class="nav-link" href="#appointment" style="color:white">Request</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#appointment" style="color:white">Orders</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/logout" style="color:white">Log Out</a>
+            </li>
+
+
+        </ul>
+    </div>
+</nav>
+    <h1 style="color: black;margin-top:50px;text-align: center;">Donor List</h1>
+  <table class="table table-dark table-bordered">
+    <tbody>
+      <tr style="color:white">
+        <th style="text-align: center;">Id(hidden)</th>
+        <th style="text-align: center;">Name</th>
+        <th style="text-align: center;">Location</th>
+        <th style="text-align: center;">Request</th>
+      </tr>
+      <% users.forEach(function(user){ %>
+            <% if(bg == user['bloodgroup'] && location.toUpperCase() == user['address'].toUpperCase()){ %>
+            <tr>
+                <td><form id="form1"  action="/orders" method="post"></td>
+                <td style="text-align:center;display:none;"><input type="text" value="<%= user._id %>" name="myid"></td>
+                <td style="text-align:center;display:none;"><input type="text" value="<%= user._id %>" name="id"></td>
+                <td style="text-align: center;"><input type="text" value="<%= user['fname']%>"  name="fname"></td>
+                <td style="text-align: center;"><input type="text" value="<%= user['address']%>" name="mobilenumber"></td>
+                <td style="text-align: center;">
+                    <button type="submit" class="btn btn-success">Request</button>
+                </td>
+                
+            </tr>
+            <% } %>
+            <% }); %>
+    </tbody>
+  </table>
+  <!--<div class="Table">
+    <div class="Heading">
+        <div class="Cell">
+            <p>Name</p>
+        </div>
+        <div class="Cell">
+            <p>Location</p>
+        </div>
+        <div class="Cell">
+            <p>Request</p>
+        </div>
+    </div>
+    <% users.forEach(function(user){ %>
+            <% if(bg == user['bloodgroup'] && location.toUpperCase() == user['address'].toUpperCase()){ %>
+    <form action="/orders" method="post">
+    <div class="Row">
+        <div class="Cell">
+            <p style="display:none;"><input type="text" name="id" value="<%= user._id%>"></p>
+        </div>
+        <div class="Cell">
+            <p><input type="text" name="fname" value="<%= user['fname']%>"></p>
+        </div>
+        <div class="Cell">
+            <p><input type="text" name="mobilenumber" value="<%= user['mobilenumber']%>"></p>
+        </div>
+        <div class="Cell">
+            <p><button type="submit" class="btn btn-success">Accept</button></p>
+        </div>
+    </div>
+    </form>
+    <% } %>
+    <% }); %>
+</div>-->
+
+  
+  
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
